@@ -28,7 +28,6 @@ img#headerImage {
     padding-left: 3rem;
 }
 
-
 div#header {
     height: 100vh;
 }
@@ -38,6 +37,14 @@ div#facts {
     text-align: center;
 }
 
+div#mapContent {
+    height: 100vh;
+}
+
+#map {
+    width: 100vw;
+    height: 60vh;
+}
 
 @font-face {
     font-family: "avenirNext";

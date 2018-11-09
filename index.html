@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
     <title>Duo Marathon</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -20,5 +22,21 @@
     <h1>Facts</h1>
 </div>
 
+<div id="mapContent">
+    <h1>Facts</h1>
+    <div id='map'></div>
+</div>
+
 </body>
 </html>
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2V2aWs3OCIsImEiOiJjam5wc2hmY3QwN3N6M3BtYmRsbG44d3d1In0.oT7DgV3YZQa9rf_Mpzvgbw';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/sevik78/cjoa160jm0w992rmmxy8wl2aj',
+        center: [8.315704, 47.026129],
+        zoom: 12
+    });
+</script>
