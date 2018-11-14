@@ -8,24 +8,191 @@ h1 {
     font-size: 5.625rem;
 }
 
-img#headerImage {
-    position: absolute;
-    left: 75%;
-    margin-left: -256px;
-    z-index: -1;
-    padding-top: 30px
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header {
+        font-weight: 800;
+        font-size: 2.5rem;
+        height: 100vh;
+        border-bottom: 3px solid white;
+        padding-top: 120px;
+        padding-left: 40px;
+    }
+
+    img#headerImage {
+        position: absolute;
+        left: 10vw;
+        z-index: -1;
+        padding-top: 30px;
+        height: 55vh;
+        width: auto;
+        bottom: 0;
+    }
+
+    .item {
+        width: 90%;
+        height: 100%;
+        margin: 20px auto;
+        padding: 10px 0 10px 0;
+        text-align: center;
+    }
 }
 
-.header {
-    font-weight: 800;
-    font-size: 12rem;
-    height: 100vh;
-    border-bottom: 3px solid white;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .header {
+        font-weight: 800;
+        font-size: 4rem;
+        height: 100vh;
+        border-bottom: 3px solid white;
+        padding-top: 400px;
+        padding-left: 40px;
+    }
+
+    img#headerImage {
+        position: absolute;
+        left: 30vw;
+        z-index: -1;
+        padding-top: 30px;
+        height: 70vh;
+        width: auto;
+        bottom: 0;
+    }
+
+    .item {
+        width: 80%;
+        height: 100%;
+        margin: 20px auto;
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
 }
 
-.luzern {
-    padding-top: 6.25rem;
-    padding-left: 3rem;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header {
+        font-weight: 800;
+        font-size: 6rem;
+        height: 100vh;
+        border-bottom: 3px solid white;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+    img#headerImage {
+        position: absolute;
+        left: 25vw;
+        z-index: -1;
+        padding-top: 30px;
+        height: 70vh;
+        width: auto;
+        bottom: 0;
+    }
+
+    .item {
+        width: 70%;
+        height: 100%;
+        margin: 20px auto;
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .header {
+        font-weight: 800;
+        font-size: 8rem;
+        height: 100vh;
+        border-bottom: 3px solid white;
+        padding-top: 430px;
+        padding-left: 40px;
+    }
+
+    img#headerImage {
+        position: absolute;
+        left: 40vw;
+        z-index: -1;
+        padding-top: 30px;
+        height: 85vh;
+        width: auto;
+        bottom: 0;
+    }
+
+    .item {
+        width: 60%;
+        height: 100%;
+        margin: 20px auto;
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .header {
+        font-weight: 800;
+        font-size: 9rem;
+        height: 100vh;
+        border-bottom: 3px solid white;
+        padding-top: 0;
+    }
+
+    img#headerImage {
+        position: absolute;
+        left: 45vw;
+        z-index: -1;
+        padding-top: 30px;
+        height: 90vh;
+        width: auto;
+        bottom: 0;
+    }
+
+    .luzern {
+        padding-top: 6.25rem;
+        padding-left: 3rem;
+    }
+
+    .item {
+        width: 50%;
+        height: 100%;
+        margin: 20px auto;
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .header {
+        font-weight: 800;
+        font-size: 12rem;
+        height: 100vh;
+        border-bottom: 3px solid white;
+        padding-top: 0;
+    }
+
+    img#headerImage {
+        position: absolute;
+        left: 45vw;
+        z-index: -1;
+        padding-top: 30px;
+        height: 90vh;
+        width: auto;
+        bottom: 0;
+    }
+
+    .luzern {
+        padding-top: 6.25rem;
+        padding-left: 3rem;
+    }
+
+    .item {
+        width: 50%;
+        height: 100%;
+        margin: 20px auto;
+        padding: 40px 0 40px 0;
+        text-align: center;
+    }
 }
 
 div#header {
@@ -37,13 +204,17 @@ div#facts {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
 div#mapContent {
     height: 100vh;
 }
 
 #map {
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
 }
 
 @font-face {
