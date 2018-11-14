@@ -13,23 +13,27 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        style: {
-            color: '#fffd3d',
-            fontWeight: 'bold',
-        },
+        text: ''
     },
-    subtitle: {
-        style: {
-            color: '#24ff22',
-            fontWeight: 'bold',
-        },
-        text: 'subtitle'
-    },
+
     xAxis: [{
+        title: {
+            text: 'Kilometer',
+            style: {
+                color: '#FFFFFF',
+                fontSize: '2rem',
+                fontFamily: 'avenirNext'
+            },
+        },
         categories: categories,
         reversed: false,
         labels: {
-            step: 1
+            step: 1,
+            style: {
+                color: '#FFFFFF',
+                fontWeight: 'bold',
+                fontSize: '0.75rem'
+            },
         }
     }, { // mirror axis on right side
         opposite: true,
@@ -37,34 +41,54 @@ Highcharts.chart('container', {
         categories: categories,
         linkedTo: 0,
         labels: {
-            step: 1
+            step: 1,
+            style: {
+                color: '#FFFFFF',
+                fontWeight: 'bold',
+                fontSize: '0.75rem'
+            },
         }
     }],
 
 
-    yAxis: {
+    yAxis: [{
         title: {
+            text: 'Pace',
             style: {
                 color: '#FFFFFF',
-                fontWeight: 'bold',
+                fontSize: '2rem',
+                fontFamily: 'avenirNext'
             },
-            text: null
         },
         labels: {
+            step: 2,
             style: {
                 color: '#FFFFFF',
                 fontWeight: 'bold',
+                fontSize: '0.75rem'
             },
             formatter: function () {
-                return Math.abs(this.value) + '/km';
+                return Math.abs(this.value) + 'min / km';
             }
         }
-    },
+    }],
 
     plotOptions: {
         series: {
             stacking: 'normal'
         }
+    },
+
+    // TODO: Style with css
+    legend: {
+        style: {
+            color: '#FFFFFF',
+            fontWeight: 'bold',
+            fontSize: '0.75rem'
+        },
+        itemMarginTop: 10,
+        itemMarginBottom: 10,
+        layout: 'vertical',
     },
 
     tooltip: {
@@ -82,18 +106,20 @@ Highcharts.chart('container', {
 
 
     series: [{
-        name: 'Severin',
+        name: 'Kevin',
         data: [
             -4.06, -4.12, -4.11, -4.14, -4.17, -3.51, -4.05, -4.02, -4.06, -3.56, -3.57, -4.00, -3.46, -4.15, -3.52, -4.03, -4.05, -3.54, -3.56, -3.50, -3.40,
         ],
         borderColor: 'transparent',
-        color: {linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+        color: {
+            linearGradient: {x1: 0, x2: 0, y1: 0, y2: 1},
             stops: [
                 [0, '#FC3832'],
                 [1, '#F2C314']
-            ]}
+            ]
+        }
     }, {
-        name: 'Kevin',
+        name: 'Severin',
         data: [
             2.1, 2.0, 2.1, 2.3, 2.6,
             2.9, 3.2, 3.1, 2.9, 3.4,
@@ -102,10 +128,12 @@ Highcharts.chart('container', {
             0.0
         ],
         borderColor: 'transparent',
-        color: {linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+        color: {
+            linearGradient: {x1: 0, x2: 0, y1: 0, y2: 1},
             stops: [
-                [0, '#32FBFC'],
-                [1, '#3214F2']
-            ]}
+                [0, '#FC3832'],
+                [1, '#F2C314']
+            ]
+        }
     }]
 });
