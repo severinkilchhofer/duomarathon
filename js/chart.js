@@ -16,6 +16,10 @@ Highcharts.chart('container', {
         text: ''
     },
 
+    credits: {
+        enabled: false
+    },
+
     xAxis: [{
         title: {
             text: 'Kilometer',
@@ -56,7 +60,7 @@ Highcharts.chart('container', {
             text: 'Pace',
             style: {
                 color: '#FFFFFF',
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 fontFamily: 'avenirNext'
             },
         },
@@ -86,9 +90,8 @@ Highcharts.chart('container', {
             fontWeight: 'bold',
             fontSize: '0.75rem'
         },
-        itemMarginTop: 10,
-        itemMarginBottom: 10,
-        layout: 'vertical',
+        // itemMarginTop: 10,
+        // itemMarginBottom: 10,
     },
 
     tooltip: {
