@@ -8,9 +8,19 @@ var categories = [
 ];
 
 Highcharts.chart('container', {
+    legend: {
+        reversed: true,
+        itemStyle: {
+            color: '#FFFFFF',
+            fontWeight: '400',
+            fontSize: '1rem',
+            fontFamily: 'avenirNext'
+        }
+    },
+
     chart: {
         backgroundColor: 'transparent',
-        type: 'bar'
+        type: 'bar',
     },
     title: {
         text: ''
@@ -35,7 +45,7 @@ Highcharts.chart('container', {
             step: 1,
             style: {
                 color: '#FFFFFF',
-                fontWeight: 'bold',
+                fontWeight: '400',
                 fontSize: '0.75rem'
             },
         }
@@ -48,7 +58,7 @@ Highcharts.chart('container', {
             step: 1,
             style: {
                 color: '#FFFFFF',
-                fontWeight: 'bold',
+                fontWeight: '400',
                 fontSize: '0.75rem'
             },
         }
@@ -68,7 +78,7 @@ Highcharts.chart('container', {
             step: 2,
             style: {
                 color: '#FFFFFF',
-                fontWeight: 'bold',
+                fontWeight: '400',
                 fontSize: '0.75rem'
             },
             formatter: function () {
@@ -81,17 +91,6 @@ Highcharts.chart('container', {
         series: {
             stacking: 'normal'
         }
-    },
-
-    // TODO: Style with css
-    legend: {
-        style: {
-            color: '#FFFFFF',
-            fontWeight: 'bold',
-            fontSize: '0.75rem'
-        },
-        // itemMarginTop: 10,
-        // itemMarginBottom: 10,
     },
 
     tooltip: {
